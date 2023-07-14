@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventory Management</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Management</h1>
+    <div id="loginForm">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+    <div id="inventoryForm" style="display: none;">
+      <h2>Add Item</h2>
+      <input type="text" id="name" placeholder="Name">
+      <select id="category">
+        <option value="">Select Category</option>
+        <option value="Taxable">Taxable</option>
+        <option value="Non-taxable">Non-taxable</option>
+      </select>
+      <select id="subcategory">
+        <option value="">Select Subcategory</option>
+        <option value="Edible">Edible</option>
+        <option value="Cosmetics">Cosmetics</option>
+        <option value="Liquor">Liquor</option>
+        <option value="Others">Others</option>
+      </select>
+      <input type="number" id="quantity" placeholder="Quantity">
+      <button onclick="addItem()">Add Item</button>
+      <h2>Inventory</h2>
+      <table id="inventoryTable">
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Subcategory</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </table>
+      <button onclick="exportCSV()">Export CSV</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
